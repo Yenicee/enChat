@@ -52,20 +52,20 @@ export default function RegisterAndLoginForm() {
                     />
 
                     <button className="py-2 px-5 rounded-sm p-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
-                        {isLoginOrRegister === 'register' ? 'Register' : 'Login'}
+                        {isLoginOrRegister === 'register' ? 'register' : 'Login'}
                     </button>
 
                     <div className="text-sm mt-3 font-medium text-gray-300">
                         {isLoginOrRegister === 'register' && (
                             <div>
                                 Already a member?
-                                <button onClick={() => setIsLoginOrRegister('Login')}>Login here</button>
+                                <button className="ml-1" onClick={() => setIsLoginOrRegister('Login')}>Login here</button>
                             </div>
                         )}
                         {isLoginOrRegister === 'Login' && (
                             <div>
                                 Don't have an account?
-                                <button onClick={() => setIsLoginOrRegister('register')}>Register here</button>
+                                <button className="ml-1" onClick={() => setIsLoginOrRegister('register')}>Register here</button>
                             </div>
                         )}
                     </div>
